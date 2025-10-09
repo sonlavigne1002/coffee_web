@@ -1,9 +1,213 @@
-/Users/chevson/4-coffee-JS/assets
-/Users/chevson/4-coffee-JS/public
-/Users/chevson/4-coffee-JS/public/explore.html
-/Users/chevson/4-coffee-JS/public/index.html
-/Users/chevson/4-coffee-JS/public/order.html
-/Users/chevson/4-coffee-JS/src
-/Users/chevson/4-coffee-JS/src/script.js
-/Users/chevson/4-coffee-JS/src/style.css
-/Users/chevson/4-coffee-JS/README.md
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#f7f4ef] font-sans overflow-x-hidden scroll-pt-20 scroll-smooth">
+    <section id="home" class="relative w-full h-screen bg-no-repeat bg-cover bg-center " 
+        style="background-image: url('/assets/images/cover_home.jpeg');">
+        
+        <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out">
+            <div class="container mx-auto flex flex-col sm:flex-row justify-between items-center px-6 py-4">
+                <div class="flex items-center space-x-3">
+                    <img src="../assets/images/logo.jpg" alt="Coffee Shop Logo" class="h-12 w-12 rounded-full">
+                    <h1 class="text-2xl font-bold text-white">Family Coffee</h1>
+                </div>
+                <nav>
+                <ul class="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 text-white font-medium">
+                    <li><a href="#home" class="hover:text-yellow-300 transition-colors duration-200">Home</a></li>
+                    <li><a href="#menu" class="hover:text-yellow-300 transition-colors duration-200">Menu</a></li>
+                    <li><a href="#gallery" class="hover:text-yellow-300 transition-colors duration-200">Gallery</a></li>
+                    <li><a href="#contact" class="hover:text-yellow-300 transition-colors duration-200">Contact Us</a></li>
+                </ul>
+                </nav>
+                <div class="flex space-x-3 mt-4 sm:mt-0">
+                    <button class="bg-[#A0583C] text-white px-5 py-2.5 rounded-lg hover:bg-[#8b5e5e] transition duration-300">
+                        <a href="/public/order.html">Order Now</a>
+                    </button>
+                    
+                    <button id="login-btn" class="bg-[#A0583C] text-white px-4 py-1 rounded hover:bg-[#8b5e5e] transition duration-300">
+                        Login
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+            <div class="text-center p-8 z-10">
+                <h2 class="text-4xl sm:text-6xl font-serif text-white mb-4 tracking-wider fade-in" 
+                    data-delay="0">
+                    Enjoy Your Coffee
+                </h2>
+                <p class="text-lg sm:text-xl font-serif text-yellow-300 mb-8 max-w-2xl mx-auto fade-in" 
+                    data-delay="200">
+                    Quality coffee, roasted with passion. Experience the perfect blend of flavor and aroma in every cup.
+                </p>
+                <div class="flex justify-center space-x-4 fade-in" data-delay="400">
+                    <a href="order.html" class="bg-[#C08267] text-white py-3 px-8 rounded-full font-bold 
+                        shadow-lg hover:bg-[#A0583C] transition-colors duration-300 transform 
+                        hover:scale-105">
+                        Order Now
+                    </a>
+                    <a href="explore.html" class="bg-white text-[#A0583C] py-3 px-8 rounded-full font-bold 
+                        shadow-lg hover:text-[#8B452B] hover:shadow-xl transition-colors duration-300 transform 
+                        hover:scale-105">
+                        Explore Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="menu" class="py-20 px-4 bg-cream">
+    <div class="container mx-auto max-w-6xl">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+            
+            <div class="text-center animate-fade-in" style="animation-delay: 0ms">
+                <div class="flex justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-coffee-medium">
+                        <path d="M10 2v2"/>
+                        <path d="M14 2v2"/>
+                        <path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/>
+                        <path d="M6 2v2"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-serif font-bold text-foreground mb-4">
+                    Delicious coffee
+                </h3>
+                <p class="text-base text-muted-foreground leading-relaxed">
+                    The unique taste and aroma of the best coffee in the city will stimulate you to action. You can order sweets or lunch dishes to accompany your coffee.
+                </p>
+            </div>
+
+            <div class="text-center animate-fade-in" style="animation-delay: 100ms">
+                <div class="flex justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-coffee-medium">
+                        <path d="M10 2v2"/>
+                        <path d="M14 2v2"/>
+                        <path d="M18 10h1a3 3 0 0 1 3 3v2a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3v-2a3 3 0 0 1 3-3h14"/>
+                        <path d="M8 18v2"/>
+                        <path d="M16 18v2"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-serif font-bold text-foreground mb-4">
+                    Freshly Baked 
+                </h3>
+                <p class="text-base text-muted-foreground leading-relaxed">
+                    From flaky croissants to soft muffins — enjoy the aroma of freshness in every bite. Our pastries are baked daily with love and local ingredients.
+                </p>
+            </div>
+
+            <div class="text-center animate-fade-in" style="animation-delay: 200ms">
+                <div class="flex justify-center mb-6">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="text-coffee-medium">
+                        <path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/>
+                        <path d="M7 2v20"/>
+                        <path d="M21 15V2v0a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/>
+                    </svg>
+                </div>
+                <h3 class="text-2xl font-serif font-bold text-foreground mb-4">
+                    Homemade & Heartmade
+                </h3>
+                <p class="text-base text-muted-foreground leading-relaxed">
+                    Indulge in our handcrafted desserts — each bite tells a story of passion and flavor. Crafted with care, our artisan treats bring a taste of home.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <section id="gallery" class="bg-white py-20 px-10">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl font-bold text-[#5A2E1B] mb-2">Our Coffee Moments</h2>
+            <p class="text-[#5A2E1B]/80">A glimpse into our cozy coffee space and signature creations.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            <img src="../assets/images/gallery_1.jpg" alt="Latte Art" class="rounded-xl shadow-lg hover:scale-105 transition duration-500">
+            <img src="../assets/images/gallery_2.jpg" alt="Coffee Beans" class="rounded-xl shadow-lg hover:scale-105 transition duration-500">
+            <img src="../assets/images/gallery_3.jpg" alt="Fresh Pastries" class="rounded-xl shadow-lg hover:scale-105 transition duration-500">
+            <img src="../assets/images/gallery_4.jpg" alt="Barista Pouring Coffee" class="rounded-xl shadow-lg hover:scale-105 transition duration-500">
+            <img src="../assets/images/gallery_5.avif" alt="Cafe Interior" class="rounded-xl shadow-lg hover:scale-105 transition duration-500">
+            <img src="../assets/images/gallery_6.jpg" alt="Coffee with Friends" class="rounded-xl shadow-lg hover:scale-105 transition duration-500">
+        </div>
+    </section>
+
+    
+    <section id="contact" class="bg-[#C08267] py-20 px-10">
+        <div class="fade-in" data-delay="0">
+            <div class="flex items-center mb-10">
+            <hr class="flex-grow ">
+            <span class="px-4 text-[#FFFADA] text-2xl font-bold uppercase tracking-wide">
+                Get In Touch With Us
+            </span>
+            <hr class="flex-grow ">
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
+            
+            <div class="flex flex-col items-start mt-10 fade-in" data-delay="200">
+                <h3 class="text-xl font-bold text-white mb-3">Family Coffee</h3>
+                <p class="text-white/90 leading-relaxed">
+                Serving premium artisan coffee since 2015. Every cup tells a story —
+                brewed with passion and perfection in Phnom Penh.
+                </p>
+            </div>
+
+            <div class="flex flex-col items-start mt-10 fade-in" data-delay="300">
+                <h5 class="text-xl font-bold text-white mb-3">Contact Us</h5>
+                <div class="space-y-4 text-white/90">
+                <div>
+                    <p class="font-semibold text-[#FFFADA] flex items-center gap-2">📍 Address</p>
+                    <p class="text-sm">123 Family Coffee, Phnom Penh</p>
+                </div>
+                <div>
+                    <p class="font-semibold text-[#FFFADA] flex items-center gap-2">📞 Phone</p>
+                    <a href="tel:+85512345678" class="text-sm hover:underline">+855 12 345 678</a>
+                </div>
+                <div>
+                    <p class="font-semibold text-[#FFFADA] flex items-center gap-2">✉️ Email</p>
+                    <a href="mailto:hello@familycoffee.example" class="text-sm hover:underline">
+                    hello@familycoffee.example
+                    </a>
+                </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col items-start mt-10 fade-in" data-delay="400">
+                <h5 class="text-xl font-bold text-white mb-3">Follow Us</h5>
+                <div class="flex space-x-4">
+                <a href="#" class="hover:scale-110 transition-transform">
+                    <img src="../assets/images/ig-log.jpg" alt="Instagram" class="w-8 h-8 rounded-lg object-contain">
+                </a>
+                <a href="#" class="hover:scale-110 transition-transform">
+                    <img src="../assets/images/fb-log.jpg" alt="Facebook" class="w-8 h-8 rounded-lg object-contain">
+                </a>
+                <a href="#" class="hover:scale-110 transition-transform">
+                    <img src="../assets/images/x-logo.jpg" alt="X (Twitter)" class="w-8 h-8 rounded-lg object-contain">
+                </a>
+                <a href="#" class="hover:scale-110 transition-transform">
+                    <img src="../assets/images/pinterest-log.jpg" alt="Pinterest" class="w-8 h-8 rounded-lg object-contain">
+                </a>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    
+    <footer class="bg-[#C08267] py-10 px-10 fade-in" data-delay="0">
+        <div class="mt-10 border-t-2 border-[#FFFADA]/30 pt-4 text-center text-sm text-[#FFFADA]">
+            &copy; 2025 Family Coffee. All rights reserved.
+        </div>
+    </footer>
+    <script src="../src/script.js"></script>
+</body>
+
+</html>

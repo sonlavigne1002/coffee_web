@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link rel="stylesheet" href="../src/style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+<body>
+    <section id="home" class="relative w-full h-[60vh] bg-no-repeat bg-cover bg-center " 
+        style="background-image: url('/assets/images/order.jpg');">
+        <div class="absolute inset-0 bg-black/40"></div>
+
+        <h2 class="flex flex-col items-start justify-center h-full text-white px-10 text-3xl sm:text-4xl md:text-5xl font-serif leading-snug fade-in text-white drop-shadow-lg" data-delay="0">
+            Our Menu
+        </h2>
+    </section>
+    <section class="pt-32 pb-20 px-4 md:px-10 bg-white">
+        <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8 ">
+            
+            <div class="lg:w-3/4">
+                <div class="flex items-center space-x-6 mb-10 border-b border-gray-300 pb-4 overflow-x-auto" id="menu-tabs">
+                    <a href="#icedrinks" id="tab-icedrinks" 
+                    class="menu-tab-link px-3 py-2 text-lg font-semibold border-b-2 
+                            text-[#A0583C] border-[#A0583C] transition-colors duration-200">Ice Drinks</a>
+                    
+                    <a href="#snack" id="tab-snacks" 
+                    class="menu-tab-link px-3 py-2 text-lg font-medium border-b-2 border-transparent 
+                            text-gray-500 hover:text-[#C08267] transition-colors duration-200">Snacks</a>
+                    
+                    <a href="#dessert" id="tab-desserts" 
+                    class="menu-tab-link px-3 py-2 text-lg font-medium border-b-2 border-transparent 
+                            text-gray-500 hover:text-[#C08267] transition-colors duration-200">Desserts</a>
+                </div>
+                <!-- ice drinks -->
+                <h2 id="ice drink" class="text-4xl font-bold text-[#A0583C] mb-8">Ice Drinks</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02]  transition duration-300 ease-in-out cursor-pointer ">
+                        <img class="w-full h-56 object-cover" src="/assets/images/ice latte.jpg" alt="Iced Latte" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Iced Latte</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Espresso with chilled milk and ice. Customizable flavor shots.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$3.50</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Iced Latte" 
+                                    data-price="3.50">Add</button>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/cold brew.jpg" alt="Cold Brew" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Signature Cold Brew</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Steeped for 18 hours for a smooth, less acidic coffee.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$4.00</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Signature Cold Brew" 
+                                    data-price="4.00">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/ice americano.jpg" alt="Iced Americano" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Iced Americano</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Shots of espresso topped with cold water and ice.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$3.00</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Iced Americano" 
+                                    data-price="3.00">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/ice matcha.jpg" alt="Iced Matcha Latte" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Iced Matcha Latte</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Premium matcha green tea mixed with cold milk.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$4.50</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Iced Matcha Latte" 
+                                    data-price="4.50">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/ice caramel.jpg" alt="Caramel Macchiato" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Iced Caramel Macchiato</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Vanilla syrup, milk, espresso, and caramel drizzle on top.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$4.25</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Iced Caramel Macchiato" 
+                                    data-price="4.25">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/ice mocha.jpg" alt="Iced Mocha" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Iced Mocha</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Espresso, chocolate syrup, cold milk, and ice.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$4.25</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Iced Mocha" 
+                                    data-price="4.25">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- snacks -->
+                <h2 id="snack" class="text-4xl font-bold text-[#A0583C] mb-8 mt-16">Pastry Foods</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/Classic Butter Croissant .jpg" alt="Classic Butter Croissant" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Classic Butter Croissant</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Flaky, buttery layers baked to golden perfection.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$4.50</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Classic Butter Croissant"
+                                    data-price="4.50">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/Almond Croissant .jpg" alt="Almond Croissant" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Almond Croissant</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Filled with almond cream and topped with sliced almonds.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$5.25</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Almond Croissant"
+                                    data-price="5.25">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/banana bread.jpg" alt="Banana bread" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Banana bread</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Moist, homemade banana bread with walnuts.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$4.50</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Banana bread"
+                                    data-price="4.50">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/Cheese Danish.jpg" alt="Cheese Danish" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Cheese Danish</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Cream cheese filling on flaky pastry with fruit glaze.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$5.50</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Cheese Danish"
+                                    data-price="5.50">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/Apple Turnover.jpg" alt="Apple Turnover" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Apple Turnover</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Spiced apples wrapped in puff pastry.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$5.25</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Apple Turnover"
+                                    data-price="5.25">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/Fruit Danish.jpg" alt="Fruit Danish" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Fruit Danish</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Seasonal fruit compote on buttery pastry.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$5.50</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Fruit Danish"
+                                    data-price="5.50">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- desserts -->
+                <h2 id="dessert" class="text-4xl font-bold text-[#A0583C] mb-8 mt-16">Artisan Cookies</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/Double Chocolate Chip .jpg" alt="Double Chocolate Chip" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Double Chocolaate Chip</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Rich chocolate cookies with dark and milk chocolate chips.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$3.50</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Double Chocolaate Chip" 
+                                    data-price="3.50">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/White Chocolate Macadamia.jpg" alt="White Chocolate Macadamia" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">White Chocolate Macadamia</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Buttery cookie with white chocolate and macadamia nuts.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$3.75</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="White Chocolate Macadamia" 
+                                    data-price="3.75">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/Snickerdoodle.jpg" alt="Snickerdoodle" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Snickerdoodle</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Soft cinnamon sugar cookie with a crackled top.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$3.25</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Snickerdoodle" 
+                                    data-price="3.25">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/Fudge Brownie .jpg" alt="Fudge Brownie" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Fudge Brownie</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Dense, rich chocolate brownie with a crackly top.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$4.50</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Fudge Brownie" 
+                                    data-price="4.50">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/Lemon Bar.jpg" alt="Lemon Bar" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Lemon Bar</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Tangy lemon custard on a buttery shortbread base.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$4.75</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Lemon Bar" 
+                                    data-price="4.75">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="menu-item-card bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl border-2 border-transparent hover:border-[#A0583C] hover:scale-[1.02] transition duration-300 ease-in-out cursor-pointer">
+                        <img class="w-full h-56 object-cover" src="/assets/images/Chocolate Cheesecake .jpg" alt="Chocolate Cheesecake" />
+                        <div class="p-4">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2 item-name">Chocolate Cheesecake</h3>
+                            <p class="text-gray-600 mb-4 text-sm">Rich chocolate cheesecake with chocolate ganache.</p>
+                            <div class="flex justify-between items-center">
+                                <span class="text-xl font-bold text-[#A0583C] item-price">$6.75</span>
+                                <button class="bg-[#A0583C] text-white px-4 py-1 rounded-lg hover:bg-[#8B452B] transition duration-300"
+                                    data-name="Chocolate Cheesecake" 
+                                    data-price="6.75">Add</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- order cart box  -->
+            <div class="w-full lg:w-1/3 sticky top-24">
+                <div id="order-cart-box" class="bg-white p-6 rounded-lg shadow-xl">
+                    <h4 class="text-xl font-bold text-gray-900 mb-6">Your order</h4>
+                    
+                    <div id="cart-items" class="text-center py-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-gray-300 mx-auto mb-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                        </svg>
+                        <p class="text-gray-500 mb-8">Cart is empty. Add menu items.</p>
+                    </div>
+                    
+                    <a href="#" id="checkout-btn" class="block text-center bg-[#A0583C] text-white py-3 rounded-lg font-semibold hover:bg-[#8B452B] transition duration-300">
+                        Go to checkout &gt;
+                    </a>
+                    <p class="text-center mt-4 font-semibold text-gray-700">Total: 
+                        <span id="cart-total">$0.00</span>
+                    </p>
+
+                    <p id="min-order-text" class="text-xs text-center text-gray-400 mt-2">Min. order $0.00</p>
+                </div>
+            </div>
+        </div>
+        
+    </section>
+    <footer class="text-center py-20">
+        <div class="container mx-auto">
+            <h3 class="text-5xl font-extrabold text-[#A0583C] mb-4 tracking-wider">Thank You!</h3>
+            
+            <p class="text-xl text-gray-700 font-medium">
+                For your order. We truly appreciate your support.
+            </p>
+        </div>
+    </footer>
+
+    <script src="../src/script.js"></script> 
+    
+</body>
+
+</html>
